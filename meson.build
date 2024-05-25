@@ -49,7 +49,7 @@ endif
 
 if host_machine.system() == 'windows'
      add_project_arguments('-DNOMINMAX', language: 'cpp')
-     extra_link_args = ['-lshlwapi', '-lwinmm', '-lWs2_32', '-liphlpapi']
+     extra_libs += ['-liphlpapi']
 else
      extra_link_args = []
 endif
